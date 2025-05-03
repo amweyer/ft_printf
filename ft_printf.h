@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amweyer <amweyer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/22 16:42:59 by amweyer           #+#    #+#             */
-/*   Updated: 2025/05/01 14:54:34 by amweyer          ###   ########.fr       */
+/*   Created: 2025/05/02 18:59:44 by amweyer           #+#    #+#             */
+/*   Updated: 2025/05/03 19:14:31 by amweyer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-static int	ft_islower(char c)
-{
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	return (0);
-}
+# include <stdarg.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-int	ft_toupper(int c)
-{
-	if (ft_islower(c))
-		return (c - 32);
-	return (c);
-}
+int	ft_printf(const char *str, ...);
+int	ft_dispatch(char c, va_list args);
+int	ft_strlen(char *str);
+int	ft_putchar(char c);
+int	ft_putstr(char *s);
+int	ft_putnbr_b(int n, char *base);
+int	ft_putnbr_bu(unsigned long nb, char *base);
+int	ft_strchr(const char *s, int c);
 
-// #include <ctype.h>
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	printf("%c\n", ft_toupper('z'));
-// 	printf("%c\n", toupper('z'));
-// }
+#endif
