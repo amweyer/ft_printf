@@ -6,12 +6,11 @@
 /*   By: amweyer <amweyer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 19:00:45 by amweyer           #+#    #+#             */
-/*   Updated: 2025/05/03 17:19:23 by amweyer          ###   ########.fr       */
+/*   Updated: 2025/05/03 17:45:06 by amweyer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
-
 
 void	ft_putnbr_base(int n, char *base)
 {
